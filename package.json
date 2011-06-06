@@ -1,0 +1,20 @@
+{
+  "name": "ostrich",
+  "description": "Stats collector",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wadey/node-ostrich.git"
+  },
+  "devDependencies": {
+    "expresso": "0.7.x"
+  },
+  "author": "Wade Simmons <wade@wades.im> (http://wades.im/mons)",
+  "main": "./lib/ostrich",
+  "scripts": {
+    "test": "expresso -I lib -s test/*.test.js"
+  },
+  "engines": {
+    "node": ">=0.2.0"
+  }
+}
