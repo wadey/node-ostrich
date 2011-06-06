@@ -20,7 +20,7 @@ There are three kinds of statistics that ostrich captures:
 
         stats.incr("births")
 
-        # or
+        // or
 
         stats.incr("widgets_sold", 5)
 
@@ -38,13 +38,13 @@ There are three kinds of statistics that ostrich captures:
 
   A timing is a stopwatch timer around code, like so:
 
-        # you can time how long until a callback fires
+        // you can time how long until a callback fires
 
         fs.open('file', stats.time('file_opening', function(err, fd) {
           // ...
         })
 
-        # you can also time something by creating a timer
+        // you can also time something by creating a timer
 
         var timer = stats.time('file_opening')
         fs.open('file', function(err, fd) {
@@ -61,8 +61,8 @@ There are three kinds of statistics that ostrich captures:
 There is a `TimingStat.prototype.toJSON` function provided to make dumping the stats to JSON easy.
 There was an attempt to make this format compatible between Scala, Python and Node.js versions.
 
-    # Don't reset
+    // Don't reset
     JSON.stringify(stats.stats())
 
-    # Do reset
+    // Do reset
     JSON.stringify(stats.stats(true))
